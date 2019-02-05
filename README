@@ -1,0 +1,47 @@
+System Programming
+PROGRAMMING ASSIGNMENT
+
+PART 1
+
+	Write a procedure Enter-Symbol to construct a symbol table using a binary tree as the data structure for storage. Construct your tree so that an inorder traversal results in an alphabetized listing of the symbols. In addition to the symbols themselves, a hexadecimal value and a Boolean flag will be stored. Therefore each node in the tree will contain the following fields:
+
+		Symbol (maximum of 6 characters)
+		Value (hexadecimal number)
+		Left pointer
+		Right pointer
+		Boolean flag
+
+	Your procedure will receive as input a symbol and its hexadecimal and Boolean values. It will check that the symbol begins with an alphabetic character and that it has not been previously entered in the tree. A symbol that begins with a non-alphabetic character or that has already been entered should be rejected and cause an error message to be printed: "illegal symbol" or "doubly defined" respectively. A symbol with a length of more than 6 characters should be truncated. 
+
+Part 2
+
+Write a procedure Search_Tree that receives a symbol as input and searches the tree for it. If the symbol is not found an error message is printed: "undefined symbol". Otherwise the symbol along with its value and flag are printed.
+
+Part 3
+
+Write a procedure Print_Table to print the entire contents of the symbol table node-by node using an inorder traversal. Print each symbol along with its value and flag.
+
+Part 4
+
+Write a program that integrates the above 3 procedures. It will read a list of symbols, enter them into the symbol table by calling Enter_Symbol, search for some symbols by calling Search_Tree, and print the contents of the table by calling Print_Table. Use the test data which follows.
+
+TEST DATA
+
+Symbol 		Value 		Flag
+Orange 		32 			false
+Pear 			1c 			true
+1 pear 		2a 			false
+peach 		60 			true
+Orange 		0D 			false
+peach1 		23 			true
+banana 		50 			false
+mango 		45 			true
+mellon 		80 			true
+apple 		5A 			true
+pear 			6B 			true
+Eggplant 		9c 			False
+
+search the table for: 	orange
+					carrot 
+					apple 
+					mango
